@@ -2,7 +2,7 @@ import React from "react";
 
 function Results(props) {
   return (
-    <div>
+    <div className="UI-container">
       <h1>Your order is ready!</h1>
       <div>cookie svg here</div>
       <p>
