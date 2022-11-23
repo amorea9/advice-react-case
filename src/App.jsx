@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Landing from "./components/Landing";
-import "./App.css";
+import "./App.scss";
 import Order from "./components/Order";
 import Results from "./components/Results";
 import KnowMore from "./components/KnowMore";
@@ -28,7 +28,7 @@ function App() {
   }
   return (
     <>
-      <a href="index.html"> Title here </a>
+      <a href="index.html">Logo</a>
       {page === "page1" ? <Landing getOrder={getOrder} page={page} /> : null}
       {page === "page2" ? <Order getResults={getResults} page={page} /> : null}
       {page === "page3" ? <Results getMore={getMore} getOrder={getOrder} page={page} /> : null}

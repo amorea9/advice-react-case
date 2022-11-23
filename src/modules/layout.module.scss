@@ -1,0 +1,8 @@
+@import url(../App.scss);
+
+body {
+  background-color: var(--bg_colour);
+}
+
+// move styling into modules later?
+// importing them doesn't work atm

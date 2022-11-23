@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+:root {
+  // VARIABLES - Colours, fonts, etc.
+  --bg_colour: #5a1d1f;
+  --box_colour: #fff1ee;
+  --font-colour: #721e14;
+  --accent_colour: #e02955;
+  --accent_colour_light: #ff87a4;
+  --white_colour: #ffffff;
+
+  --header-font: "Shrikhand", cursive;
+  --text-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1em;
+  font-family: var(--text-font);
+}
+
+a {
+  color: var(--accent_colour);
+}
+
+// ---------- MOVE THIS INTO MODULES? ----------
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: var(--accent_colour);
+  margin-bottom: 1rem;
+  //   text-align: center;
+}
+
+h2,
+h3 {
+  font-family: var(--text-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--font-colour);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--font-colour);
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: var(--bg_colour);
+}
+
+// UI BOX - GENERAL STYLING
+.UI-container {
+  background-color: var(--box_colour);
+  margin: 2rem;
+  padding: 2rem;
+}
+
+// BUTTONS
+button,
+input[type="reset"] {
+  background-color: var(--accent_colour);
+  color: var(--white_colour);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: var(--accent_colour);
+  border-radius: 5px;
+  padding: 0.25rem;
+  padding-inline: 2rem;
+  //   width: fit-content;
+  margin-top: 1rem;
+  margin-inline-end: 1rem;
+}
+
+button:hover {
+  background-color: var(--accent_colour_light);
+  border-color: var(--accent_colour_light);
+}
+
+button[type="secondary"],
+input[type="reset"] {
+  background-color: transparent;
+  color: var(--accent_colour);
+}
+
+button[type="secondary"]:hover,
+input[type="reset"]:hover {
+  background-color: rgba(255, 135, 164, 0.3);
+  border-color: var(--accent_colour);
+}
+
+// INPUT FIELD - NUMBER
+
+input[type="number"] {
+  background-color: var(--white_colour);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-color: var(--accent_colour);
+  width: 3rem;
+  text-align: center;
+  margin-inline: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

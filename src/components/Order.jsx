@@ -5,7 +5,7 @@ function Order(props) {
     e.preventDefault();
   }
   return (
-    <div>
+    <div className="UI-container">
       <h1>Submit your order</h1>
 
       <form onSubmit={submit} className="form">
