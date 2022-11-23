@@ -28,7 +28,9 @@ function App() {
   }
   return (
     <>
-      <a href="index.html">Logo</a>
+      <a className="logo" href="index.html">
+        <img src="assets/cookie-bakery_logo.png" alt="Cookie Bakery Logo" />
+      </a>
       {page === "page1" ? <Landing getOrder={getOrder} page={page} /> : null}
       {page === "page2" ? <Order getResults={getResults} page={page} /> : null}
       {page === "page3" ? <Results getMore={getMore} getOrder={getOrder} page={page} /> : null}

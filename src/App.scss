@@ -62,6 +62,7 @@ body {
   background-color: var(--box_colour);
   margin: 2rem;
   padding: 2rem;
+  display: grid;
 }
 
 // BUTTONS
@@ -180,4 +181,29 @@ label {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+
+// COOKIE SVGS
+.cookie {
+  width: 12rem;
+  height: auto;
+  margin: 2rem;
+  justify-self: center;
+}
+
+.cookie_count {
+  font-size: 5rem;
+  color: var(--accent_colour);
+}
+
+// LOGO
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  margin-inline: 4rem;
+}
+
+.logo img {
+  max-height: 10rem;
 }
