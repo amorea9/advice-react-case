@@ -49,3 +49,15 @@
   flex-direction: row;
   gap: 1rem;
 }
+.smiley_face {
+  animation: scaleCircle 3000ms infinite linear;
+}
+
+@keyframes scaleCircle {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
