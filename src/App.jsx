@@ -22,7 +22,7 @@ function App() {
       setTimeout(() => {
         setLoading(false);
         setPage((page) => (page = pages.results));
-      }, 3000);
+      }, 2000);
     }
   }, [loading]);
 
@@ -38,9 +38,8 @@ function App() {
     setChoiceOfFlavour(e.target.value);
     console.log("from choice of flavour", e.target.value);
   };
-
   function calculate(search) {
-    setCalculation((calculation) => (calculation = (Number(search) * 1.38) / 0.2));
+    setCalculation((calculation) => (calculation = parseInt((Number(search) * 0.2) / 1.38)));
     return calculation;
   }
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-function KnowMore() {
+function KnowMore(props) {
   return (
     <div className="UI-container">
       <h1>How do we know?</h1>
