@@ -305,6 +305,17 @@ label {
   }
 }
 
+// LOADING ANIMATION
+
+.oven {
+  justify-self: center;
+  // max-width: 20rem;
+}
+
+.oven-gradient {
+  // insert animation
+}
+
 .smiley_face {
   animation: scaleCircle 3000ms infinite linear;
 }
