@@ -13,7 +13,7 @@ function Order(props) {
           <label htmlFor="google-searches">
             <h2>How many google searches do you make a day?</h2>
           </label>
-          <input type="number" name="google-searches" onChange={props.searchChanged} defaultValue={props.search} required></input>
+          <input type="number" name="google-searches" onChange={props.searchChanged} placeholder={props.search} required></input>
         </div>
         <div className="radio_wrapper">
           <legend>
