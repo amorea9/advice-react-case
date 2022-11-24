@@ -1,6 +1,7 @@
 function Order(props) {
   function submit(e) {
     //this is only is we decide to send data to a database
+    props.getResults();
     e.preventDefault();
   }
 
@@ -13,7 +14,7 @@ function Order(props) {
           <label htmlFor="google-searches">
             <h2>How many google searches do you make a day?</h2>
           </label>
-          <input type="number" name="google-searches" onChange={props.searchChanged} placeholder={props.search} required></input>
+          <input required type="number" name="google-searches" pattern="[0-9]" onChange={props.searchChanged} aria-label="number-of-google-searches-a-day" placeholder="0"></input>
         </div>
         <div className="radio_wrapper">
           <legend>
@@ -32,8 +33,7 @@ function Order(props) {
         </div>
         <div className="buttons_wrapper">
           <input type="reset" />
-
-          <input type="submit" value="Bake" onClick={props.getResults} />
+          <input type="submit" value="Bake" />
         </div>
       </form>
     </div>
