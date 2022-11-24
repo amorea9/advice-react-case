@@ -14,12 +14,12 @@ function Loading() {
           <rect x="23" y="90" width="157" height="80" rx="3" />
         </mask>
         <rect x="23" y="90" width="157" height="80" rx="3" fill="#FFB72A" />
-        <rect x="23" y="90" width="157" height="80" rx="3" fill="url(#paint1_linear_116_16)" fill-opacity="0.5" />
+        <rect className="oven_inside" x="23" y="90" width="157" height="80" rx="3" fill="url(#paint1_linear_116_16)" fillOpacity="0.5" />
         <rect x="23" y="90" width="157" height="80" rx="3" stroke="#823C15" strokeWidth="10" mask="url(#path-2-inside-2_116_16)" />
         <mask id="path-3-inside-3_116_16" fill="white">
           <rect x="23" y="131" width="157" height="39" rx="3" />
         </mask>
-        <rect x="23" y="131" width="157" height="39" rx="3" stroke="#823C15" strokeWidth-="10" mask="url(#path-3-inside-3_116_16)" />
+        <rect x="23" y="131" width="157" height="39" rx="3" stroke="#823C15" strokeWidth="10" mask="url(#path-3-inside-3_116_16)" />
         <mask id="path-4-inside-4_116_16" fill="white">
           <rect x="126" y="124" width="36" height="12" rx="3" />
         </mask>
@@ -50,10 +50,10 @@ function Loading() {
           <rect x="10" y="187" width="26" height="17" rx="3" />
         </mask>
         <rect x="10" y="187" width="26" height="17" rx="3" fill="#9F9696" stroke="#0F0F0F" strokeWidth="10" mask="url(#path-12-inside-10_116_16)" />
-        <circle cx="167.5" cy="36.5" r="8" fill="#282828" stroke="black" stroke-width="5" />
-        <circle cx="125.5" cy="36.5" r="8" fill="#282828" stroke="black" stroke-width="5" />
-        <circle cx="77.5" cy="36.5" r="8" fill="#282828" stroke="black" stroke-width="5" />
-        <circle cx="35.5" cy="36.5" r="8" fill="#282828" stroke="black" stroke-width="5" />
+        <circle cx="167.5" cy="36.5" r="8" fill="#282828" stroke="black" strokeWidth="5" />
+        <circle cx="125.5" cy="36.5" r="8" fill="#282828" stroke="black" strokeWidth="5" />
+        <circle cx="77.5" cy="36.5" r="8" fill="#282828" stroke="black" strokeWidth="5" />
+        <circle cx="35.5" cy="36.5" r="8" fill="#282828" stroke="black" strokeWidth="5" />
         <defs>
           <linearGradient id="paint0_linear_116_16" x1="102" y1="13" x2="102" y2="259.5" gradientUnits="userSpaceOnUse">
             <stop stopColor="#797979" />

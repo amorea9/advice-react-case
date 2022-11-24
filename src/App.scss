@@ -148,6 +148,10 @@ input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
+//for mozilla
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
 
 input[type="number"]:focus {
   outline: solid;
@@ -322,21 +326,20 @@ blockquote {
 .oven {
   justify-self: center;
   // max-width: 20rem;
+  margin-top: 3rem;
 }
 
+.oven_inside,
 .oven-gradient {
   // insert animation
+  animation: bakeCookies 900ms infinite alternate ease-in-out;
 }
 
-.smiley_face {
-  animation: scaleCircle 3000ms infinite linear;
-}
-
-@keyframes scaleCircle {
+@keyframes bakeCookies {
   from {
-    transform: scale(0.5);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
   }
 }
