@@ -53,14 +53,17 @@ function Results(props) {
         </defs>
       </svg>
       {/* use props to pass in result */}
-      <h2>
-        Your daily google searches are equivalent to <br /> <span className="cookie_count">5</span> <br /> cookies
-      </h2>
-      <div className="buttons_wrapper">
-        <button type="secondary" onClick={props.getMore}>
-          How do we know?
-        </button>
-        <button onClick={props.getOrder}>Bake again</button>
+      <div className="result_wrapper">
+        <h2>Your daily digital behaviour is equivalent to</h2>
+        <h2 className="cookie_count">5</h2>
+        <h2>cookies</h2>
+
+        <div className="buttons_wrapper">
+          <button type="secondary" onClick={props.getMore}>
+            How do we know?
+          </button>
+          <button onClick={props.getOrder}>Bake again</button>
+        </div>
       </div>
     </div>
   );

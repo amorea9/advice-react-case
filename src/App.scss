@@ -27,6 +27,10 @@ a {
   color: var(--accent_colour);
 }
 
+#root {
+  display: grid;
+}
+
 // ---------- MOVE THIS INTO MODULES? ----------
 
 h1 {
@@ -34,16 +38,22 @@ h1 {
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: var(--accent_colour);
-  margin-bottom: 1rem;
-  //   text-align: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-h2,
-h3 {
+h2 {
   font-family: var(--text-font);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--font-colour);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--accent_colour_light);
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -60,9 +70,12 @@ body {
 // UI BOX - GENERAL STYLING
 .UI-container {
   background-color: var(--box_colour);
-  margin: 2rem;
+  margin-bottom: 2rem;
+  margin-inline: 3rem;
   padding: 2rem;
   display: grid;
+  border-radius: 5px;
+  box-shadow: #390e10 2px 5px 20px;
 }
 
 // BUTTONS
@@ -76,10 +89,10 @@ input[type="reset"] {
   border-width: 1.5px;
   border-color: var(--accent_colour);
   border-radius: 5px;
-  padding: 0.25rem;
+  padding: 0.5rem;
   padding-inline: 2rem;
-  margin-top: 1rem;
-  margin-inline-end: 1rem;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 button:hover {
@@ -96,6 +109,13 @@ button[type="secondary"]:hover,
 input[type="reset"]:hover {
   background-color: rgba(255, 135, 164, 0.3);
   border-color: var(--accent_colour);
+}
+
+.buttons_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
 }
 
 // FORM FIELDS
@@ -160,6 +180,7 @@ input[type="radio"] {
   border-radius: 50%;
   display: grid;
   place-content: center;
+  cursor: pointer;
 }
 
 input[type="radio"]::before {
@@ -185,15 +206,28 @@ label {
 
 // COOKIE SVGS
 .cookie {
-  width: 12rem;
+  width: 10rem;
   height: auto;
-  margin: 2rem;
+  margin-bottom: 1rem;
   justify-self: center;
 }
 
 .cookie_count {
   font-size: 5rem;
+  line-height: 5rem;
   color: var(--accent_colour);
+  margin: 0;
+}
+
+// RESULTS
+.result_wrapper {
+  display: grid;
+  justify-items: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
 }
 
 // LOGO
@@ -205,5 +239,66 @@ label {
 }
 
 .logo img {
-  max-height: 10rem;
+  max-height: 8rem;
+}
+
+// ----- MEDIA QUERIES -----
+
+// desktop
+@media only screen and (min-width: 700px) {
+  .UI-container {
+    margin-inline: 6rem;
+  }
+
+  .form {
+    margin-inline: 4rem;
+
+    h2 {
+      max-width: 20rem;
+    }
+  }
+
+  .searches_wrapper {
+    justify-content: space-between;
+  }
+
+  .radio_wrapper {
+    display: flex;
+    // grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .radio_options {
+    margin: 0;
+  }
+
+  .result_wrapper,
+  .text_wrapper {
+    margin-inline: 4rem;
+  }
+
+  h2,
+  h3,
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// wide screen
+@media only screen and (min-width: 1100px) {
+  .UI-container {
+    width: 50rem;
+    justify-self: center;
+  }
+
+  .form,
+  .text_wrapper,
+  .result_wrapper {
+    margin-inline: 6rem;
+  }
 }

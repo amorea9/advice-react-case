@@ -31,10 +31,11 @@ function Order(props) {
           </div>
         </div>
         <div className="buttons_wrapper">
+          <input type="reset" />
+
           <button type="submit" onClick={props.getResults}>
             Bake
           </button>
-          <input type="reset" />
         </div>
       </form>
     </div>

@@ -4,6 +4,7 @@ import "./App.scss";
 import Order from "./components/Order";
 import Results from "./components/Results";
 import KnowMore from "./components/KnowMore";
+import logo from "./assets/cookie-bakery_logo.png";
 
 function App() {
   const pages = { landing: "page1", order: "page2", results: "page3", more: "page4" };
@@ -29,7 +30,7 @@ function App() {
   return (
     <>
       <a className="logo" href="index.html">
-        <img src="assets/cookie-bakery_logo.png" alt="Cookie Bakery Logo" />
+        <img src={logo} alt="Cookie Bakery Logo" />
       </a>
       {page === "page1" ? <Landing getOrder={getOrder} page={page} /> : null}
       {page === "page2" ? <Order getResults={getResults} page={page} /> : null}
