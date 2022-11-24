@@ -55,7 +55,7 @@ function Results(props) {
       {/* use props to pass in result */}
       <div className="result_wrapper">
         <h2>Your daily digital behaviour is equivalent to</h2>
-        <h2 className="cookie_count">5</h2>
+        <h2 className="cookie_count">{props.results.calculationQuantity}</h2>
         <h2>cookies</h2>
 
         <div className="buttons_wrapper">
