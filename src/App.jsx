@@ -13,7 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("5");
   const [calculation, setCalculation] = useState(0);
-  const [choiceOfFlavour, setChoiceOfFlavour] = useState("vanilla");
+  const [choiceOfFlavour, setChoiceOfFlavour] = useState("");
   const [results, setResults] = useState({ calculationQuantity: 0, flavour: "" });
 
   //use Effect triggered when the loading starts
