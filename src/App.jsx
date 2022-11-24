@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Landing from "./components/Landing";
-import "./App.css";
+import "./App.scss";
 import Order from "./components/Order";
 import Results from "./components/Results";
 import KnowMore from "./components/KnowMore";
+import logo from "./assets/cookie-bakery_logo.png";
 import Loading from "./components/Loading";
 
 function App() {
@@ -72,7 +73,9 @@ function App() {
   //conditionally rendering the pages below via components
   return (
     <>
-      <a href="index.html"> Title here </a>
+      <a className="logo" href="index.html">
+        <img src={logo} alt="Cookie Bakery Logo" />
+      </a>
       {page === "page1" ? <Landing getOrder={getOrder} page={page} /> : null}
       {page === "page2" ? <Order search={search} setSearch={setSearch} searchChanged={searchChanged} chooseFlavour={chooseFlavour} getResults={getResults} page={page} /> : null}
       {page === "page3" ? <Results results={results} calculation={calculation} getMore={getMore} getOrder={getOrder} page={page} /> : null}

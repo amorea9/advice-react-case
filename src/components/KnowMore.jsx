@@ -2,7 +2,7 @@ import React from "react";
 
 function KnowMore(props) {
   return (
-    <div>
+    <div className="UI-container">
       <h1>How do we know?</h1>
       <p>It takes about (1.38)g of CO2 to produce a cookie. Each google search emits about (0.2)g of CO2.</p>
       {/* <p>In the algorithm used, C stands for the CO2 that the production of a single cookie emits and S is the number of searches:</p> */}

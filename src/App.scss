@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+:root {
+  // VARIABLES - Colours, fonts, etc.
+  --bg_colour: #5a1d1f;
+  --box_colour: #fff1ee;
+  --font-colour: #721e14;
+  --accent_colour: #e02955;
+  --accent_colour_light: #ff87a4;
+  --white_colour: #ffffff;
+
+  --header-font: "Shrikhand", cursive;
+  --text-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1em;
+  font-family: var(--text-font);
+}
+
+a {
+  color: var(--accent_colour);
+}
+
+#root {
+  display: grid;
+}
+
+// ---------- MOVE THIS INTO MODULES? ----------
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: var(--accent_colour);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--text-font);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--font-colour);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--accent_colour_light);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--font-colour);
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: var(--bg_colour);
+}
+
+// UI BOX - GENERAL STYLING
+.UI-container {
+  background-color: var(--box_colour);
+  margin-bottom: 2rem;
+  margin-inline: 3rem;
+  padding: 2rem;
+  display: grid;
+  border-radius: 5px;
+  box-shadow: #390e10 2px 5px 20px;
+}
+
+// BUTTONS
+button,
+input[type="reset"] {
+  background-color: var(--accent_colour);
+  color: var(--white_colour);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: var(--accent_colour);
+  border-radius: 5px;
+  padding: 0.5rem;
+  padding-inline: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent_colour_light);
+}
+
+button[type="secondary"],
+input[type="reset"] {
+  background-color: transparent;
+  color: var(--accent_colour);
+}
+
+button[type="secondary"]:hover,
+input[type="reset"]:hover {
+  background-color: rgba(255, 135, 164, 0.3);
+  border-color: var(--accent_colour);
+}
+
+.buttons_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+// FORM FIELDS
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+input[type="number"] {
+  background-color: var(--white_colour);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-color: var(--accent_colour);
+  width: 3rem;
+  text-align: center;
+  margin-inline: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--font-colour);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: solid;
+  outline-color: var(--accent_colour);
+}
+
+.searches_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+// RADIO BUTTONS
+
+.radio_options {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+  color: var(--font-colour);
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: var(--accent_colour);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-style: solid;
+  border-color: var(--accent_colour);
+  border-width: 1px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: var(--white_colour);
+  z-index: 0;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+// COOKIE SVGS
+.cookie {
+  width: 10rem;
+  height: auto;
+  margin-bottom: 1rem;
+  justify-self: center;
+}
+
+.cookie_count {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--accent_colour);
+  margin: 0;
+}
+
+// RESULTS
+.result_wrapper {
+  display: grid;
+  justify-items: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// LOGO
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  margin-inline: 4rem;
+}
+
+.logo img {
+  max-height: 8rem;
+}
+
+// ----- MEDIA QUERIES -----
+
+// desktop
+@media only screen and (min-width: 700px) {
+  .UI-container {
+    margin-inline: 6rem;
+  }
+
+  .form {
+    margin-inline: 4rem;
+
+    h2 {
+      max-width: 20rem;
+    }
+  }
+
+  .searches_wrapper {
+    justify-content: space-between;
+  }
+
+  .radio_wrapper {
+    display: flex;
+    // grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .radio_options {
+    margin: 0;
+  }
+
+  .result_wrapper,
+  .text_wrapper {
+    margin-inline: 4rem;
+  }
+
+  h2,
+  h3,
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// wide screen
+@media only screen and (min-width: 1100px) {
+  .UI-container {
+    width: 50rem;
+    justify-self: center;
+  }
+
+  .form,
+  .text_wrapper,
+  .result_wrapper {
+    margin-inline: 6rem;
+  }
+}

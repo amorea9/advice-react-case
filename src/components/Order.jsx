@@ -5,8 +5,8 @@ function Order(props) {
   }
 
   return (
-    <div>
-      <h1>Submit your order</h1>
+    <div className="UI-container">
+      <h1>Make your order</h1>
 
       <form onSubmit={submit} className="form">
         <div className="searches_wrapper">
@@ -16,21 +16,18 @@ function Order(props) {
 
         <div className="radio_wrapper">
           <legend>Choose your flavour:</legend>
-
           <label htmlFor="chocolate_cookie">
-            <input type="radio" name="cookie_flavor" value="chocolate" id="chocolate_cookie" onChange={props.chooseFlavour} checked={props.choiceOfFlavour === "chocolate"} defaultChecked />
+            <input type="radio" name="cookie_flavor" value="chocolate" id="chocolate_cookie" defaultChecked />
             Chocolate
           </label>
 
           <label htmlFor="vanilla_cookie">
-            <input type="radio" name="cookie_flavor" value="vanilla" id="vanilla_cookie" checked={props.choiceOfFlavour === "vanilla"} onChange={props.chooseFlavour} />
+            <input type="radio" name="cookie_flavor" value="vanilla" id="vanilla_cookie" />
             Vanilla
           </label>
         </div>
 
         <input type="submit" value="bake" onClick={props.getResults} />
-
-        <input type="reset" />
       </form>
     </div>
   );
