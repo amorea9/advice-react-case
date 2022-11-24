@@ -12,25 +12,33 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("5");
   const [calculation, setCalculation] = useState(0);
+  const [choiceOfFlavour, setChoiceOfFlavour] = useState("vanilla");
+  const [results, setResults] = useState({ calculationQuantity: 0, flavour: "" });
 
   //use Effect triggered when the loading starts
   useEffect(() => {
     if (loading) {
       setTimeout(() => {
-        console.log("second time out");
         setLoading(false);
         setPage((page) => (page = pages.results));
       }, 3000);
     }
   }, [loading]);
 
+  //when number of searches changes, do this
   const searchChanged = (e) => {
     setSearch(e.target.value);
     calculate(e.target.value);
     console.log("from searchChanged", e.target.value);
   };
+  //when flavour changes, do this
+  const chooseFlavour = (e) => {
+    setChoiceOfFlavour(e.target.value);
+    console.log("from choice of flavour", e.target.value);
+  };
+
   function calculate(search) {
-    setCalculation((calculation) => (calculation = (Number(search) * 1.38) / 0.2));
+    setCalculation((calculation) => (calculation = parseInt((Number(search) * 0.2) / 1.38)));
     return calculation;
   }
 
@@ -44,13 +52,21 @@ function App() {
     setPage((page) => (page = pages.loading));
     //changing the state of the loading to true
     setLoading(true);
+    //calculate final results
+    getFinalResults(calculation, choiceOfFlavour);
+  }
 
-    //calculate results at the same time
+  function getFinalResults(calculation, choiceOfFlavour) {
+    //calculates the results object with quantity of cookies and flavour
+    setResults((results) => (results = { calculationQuantity: calculation, flavour: choiceOfFlavour }));
   }
 
   function getMore(page) {
     console.log("get more");
     setPage((page) => (page = pages.more));
+  }
+  function getLanding(page) {
+    setPage((page) => (page = pages.landing));
   }
 
   //conditionally rendering the pages below via components
@@ -58,9 +74,9 @@ function App() {
     <>
       <a href="index.html"> Title here </a>
       {page === "page1" ? <Landing getOrder={getOrder} page={page} /> : null}
-      {page === "page2" ? <Order search={search} setSearch={setSearch} searchChanged={searchChanged} getResults={getResults} page={page} /> : null}
-      {page === "page3" ? <Results calculation={calculation} getMore={getMore} getOrder={getOrder} page={page} /> : null}
-      {page === "page4" ? <KnowMore getMore={getMore} page={page} /> : null}
+      {page === "page2" ? <Order search={search} setSearch={setSearch} searchChanged={searchChanged} chooseFlavour={chooseFlavour} getResults={getResults} page={page} /> : null}
+      {page === "page3" ? <Results results={results} calculation={calculation} getMore={getMore} getOrder={getOrder} page={page} /> : null}
+      {page === "page4" ? <KnowMore getLanding={getLanding} getMore={getMore} page={page} /> : null}
       {page === "page5" ? <Loading page={page} /> : null}
     </>
   );
