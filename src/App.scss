@@ -325,14 +325,14 @@ blockquote {
 
 .oven {
   justify-self: center;
-  // max-width: 20rem;
-  margin-top: 3rem;
+  align-self: center;
+  padding: 1.5rem;
 }
 
 .oven_inside,
 .oven-gradient {
   // insert animation
-  animation: bakeCookies 900ms infinite alternate ease-in-out;
+  animation: bakeCookies 800ms infinite alternate ease-in-out;
 }
 
 @keyframes bakeCookies {
