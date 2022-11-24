@@ -10,7 +10,9 @@ function Order(props) {
 
       <form onSubmit={submit} className="form">
         <div className="searches_wrapper">
-          <label htmlFor="google-searches">How many google searches do you make a day?</label>
+          <label htmlFor="google-searches">
+            <h2>How many google searches do you make a day?</h2>
+          </label>
           <input type="number" name="google-searches" onChange={props.searchChanged} defaultValue={props.search} required></input>
         </div>
         <div className="radio_wrapper">
@@ -31,7 +33,7 @@ function Order(props) {
         <div className="buttons_wrapper">
           <input type="reset" />
 
-          <input type="submit" value="bake" onClick={props.getResults} />
+          <input type="submit" value="Bake" onClick={props.getResults} />
         </div>
       </form>
     </div>
