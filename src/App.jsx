@@ -22,7 +22,7 @@ function App() {
       setTimeout(() => {
         setLoading(false);
         setPage((page) => (page = pages.results));
-      }, 3000);
+      }, 2000);
     }
   }, [loading]);
 
