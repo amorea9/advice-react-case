@@ -312,19 +312,17 @@ label {
   // max-width: 20rem;
 }
 
+.oven_inside,
 .oven-gradient {
   // insert animation
+  animation: bakeCookies 1500ms infinite alternate ease-in-out;
 }
 
-.smiley_face {
-  animation: scaleCircle 3000ms infinite linear;
-}
-
-@keyframes scaleCircle {
+@keyframes bakeCookies {
   from {
-    transform: scale(0.5);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
   }
 }
