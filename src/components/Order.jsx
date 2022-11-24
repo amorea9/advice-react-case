@@ -15,21 +15,26 @@ function Order(props) {
           </label>
           <input type="number" name="google-searches" onChange={props.searchChanged} placeholder={props.search} required></input>
         </div>
-
         <div className="radio_wrapper">
-          <legend>Choose your flavour:</legend>
-          <label htmlFor="chocolate_cookie">
-            <input type="radio" name="cookie_flavor" value="chocolate" id="chocolate_cookie" onChange={props.chooseFlavour} defaultChecked />
-            Chocolate
-          </label>
-
-          <label htmlFor="vanilla_cookie">
-            <input type="radio" name="cookie_flavor" value="vanilla" onChange={props.chooseFlavour} id="vanilla_cookie" />
-            Vanilla
-          </label>
+          <legend>
+            <h2>Choose your flavour:</h2>
+          </legend>
+          <div className="radio_options">
+            <label htmlFor="chocolate_cookie">
+              <input type="radio" name="cookie_flavor" value="chocolate" id="chocolate_cookie" defaultChecked />
+              Chocolate
+            </label>
+            <label htmlFor="vanilla_cookie">
+              <input type="radio" name="cookie_flavor" value="vanilla" id="vanilla_cookie" />
+              Vanilla
+            </label>
+          </div>
         </div>
+        <div className="buttons_wrapper">
+          <input type="reset" />
 
-        <input type="submit" value="bake" onClick={props.getResults} />
+          <input type="submit" value="Bake" onClick={props.getResults} />
+        </div>
       </form>
     </div>
   );
