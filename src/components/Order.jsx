@@ -21,11 +21,11 @@ function Order(props) {
           </legend>
           <div className="radio_options">
             <label htmlFor="chocolate_cookie">
-              <input type="radio" name="cookie_flavor" value="chocolate" id="chocolate_cookie" defaultChecked />
+              <input type="radio" name="cookie_flavor" value="chocolate" id="chocolate_cookie" onChange={props.chooseFlavour} defaultChecked />
               Chocolate
             </label>
             <label htmlFor="vanilla_cookie">
-              <input type="radio" name="cookie_flavor" value="vanilla" id="vanilla_cookie" />
+              <input type="radio" name="cookie_flavor" value="vanilla" onChange={props.chooseFlavour} id="vanilla_cookie" />
               Vanilla
             </label>
           </div>
